@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option go_package = ".;proto";
+
+package proto;
+
+import "google/api/annotations.proto";
+
+service repertory {
+  rpc SetRepertory(GoodsRepertoryInfo) returns(BaseResp) {
+    option (google.api.http) = {
+      post: "/v1/repertory/set"
+      body: "*"
+    };
+  }; // 设置库存数
+
+  rpc GetRepertory(GoodsRepertoryInfo) returns(GoodsRepertoryInfo) {
+    option (google.api.http) = {
+      get: "/v1/repertory/get"
+    };
+  }; // 获取库存数
+
+  rpc BatchGetRepertory(GoodsListRepertory) returns(GoodsListRepertory) {
+    option (google.api.http) = {
+      get: "/v1/repertory/get/batch"
+    };
+  }; // 批量获取库存数
+
+  rpc ReduceRepertory(GoodsRepertoryInfo) returns(GoodsRepertoryInfo) {
+    option (google.api.http) = {
+      post: "/v1/repertory/reduce"
+      body: "*"
+    };
+  }; // 扣减库存
+
+  rpc BatchReduceRepertory(GoodsListRepertory) returns(GoodsListRepertory) {
+    option (google.api.http) = {
+      post: "/v1/repertory/reduce/batch"
+      body: "*"
+    };
+  }; // 批量扣减库存
+
+  rpc RollBackRepertory(GoodsRepertoryInfo) returns(GoodsRepertoryInfo) {
+    option (google.api.http) = {
+      post: "/v1/repertory/rollback"
+      body: "*"
+    };
+  }; // 用户撤销订单后回滚
+
+}
+
+message GoodsRepertoryInfo {
+  int64 goodsId = 1;
+  int64 num = 2;
+  int64 OrderId = 3;
+}
+
+message GoodsListRepertory {
+  repeated GoodsRepertoryInfo data = 1;
+}
+
+message BaseResp {
+  int32 code = 1;
+  string msg = 2;
+}

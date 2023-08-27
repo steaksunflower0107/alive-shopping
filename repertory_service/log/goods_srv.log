@@ -1,0 +1,15 @@
+{"level":"INFO","time":"2023-08-16T02:24:08.340+0800","caller":"logger/logger.go:41","msg":"init logger success"}
+{"level":"PANIC","time":"2023-08-16T02:24:08.382+0800","caller":"cmd/main.go:80","msg":"goods服务注册到consul失败"}
+{"level":"INFO","time":"2023-08-16T02:24:24.578+0800","caller":"logger/logger.go:41","msg":"init logger success"}
+{"level":"INFO","time":"2023-08-16T02:24:24.595+0800","caller":"cmd/main.go:83","msg":"goods service start..."}
+{"level":"INFO","time":"2023-08-16T02:24:24.597+0800","caller":"cmd/main.go:109","msg":"Serving gRPC-Gateway on http://0.0.0.0:8091"}
+{"level":"INFO","time":"2023-08-16T02:33:42.749+0800","caller":"logger/logger.go:41","msg":"init logger success"}
+{"level":"INFO","time":"2023-08-16T02:33:42.767+0800","caller":"cmd/main.go:83","msg":"goods service start..."}
+{"level":"INFO","time":"2023-08-16T02:33:42.768+0800","caller":"cmd/main.go:109","msg":"Serving gRPC-Gateway on http://0.0.0.0:8091"}
+{"level":"INFO","time":"2023-08-16T02:35:49.575+0800","caller":"logger/logger.go:41","msg":"init logger success"}
+{"level":"INFO","time":"2023-08-16T02:35:49.588+0800","caller":"cmd/main.go:83","msg":"goods service start..."}
+{"level":"INFO","time":"2023-08-16T02:35:49.590+0800","caller":"cmd/main.go:109","msg":"Serving gRPC-Gateway on http://0.0.0.0:8091"}
+{"level":"INFO","time":"2023-08-17T16:52:40.205+0800","caller":"logger/logger.go:41","msg":"init logger success"}
+{"level":"INFO","time":"2023-08-17T16:52:40.209+0800","caller":"cmd/main.go:84","msg":"rpc service start at 127.0.0.1:8381"}
+{"level":"INFO","time":"2023-08-17T16:52:40.213+0800","caller":"cmd/main.go:92","msg":"goods service start..."}
+{"level":"INFO","time":"2023-08-17T16:52:40.213+0800","caller":"cmd/main.go:118","msg":"Serving gRPC-Gateway on http://0.0.0.0:8091"}
